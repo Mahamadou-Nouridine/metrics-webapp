@@ -10,9 +10,6 @@ const initialState = {
 const countriesSlice = createSlice({
   name: 'countries',
   initialState,
-  reducers: {
-
-  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchData.pending, (state) => ({
