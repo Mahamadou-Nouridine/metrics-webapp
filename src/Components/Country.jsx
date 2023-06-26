@@ -1,12 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles/Country.module.css';
-import image from '../assets/images/jo.png';
 
-const Country = () => (
+const Country = ({ image, name }) => (
   <div className={styles.container}>
     <img src={image} alt="" />
-    <h3>Jordan</h3>
+    <h3>{name}</h3>
   </div>
 );
 
 export default Country;
+
+Country.defaultProps = {
+  image: '',
+  name: '',
+};
+
+Country.propTypes = {
+  image: PropTypes.string,
+  name: PropTypes.string,
+};
