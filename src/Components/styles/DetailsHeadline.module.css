@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  color: white;
+  height: calc(50vh - 60px);
+  background:
+    linear-gradient(
+      to right,
+      rgba(5, 30, 222, 0.5),
+      rgba(36, 5, 4, 0.7)
+    ),
+    no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

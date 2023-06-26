@@ -10,9 +10,9 @@ import store from './redux/store';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route errorElement={<div>No page found</div>} path="/" element={<Layout />}>
       <Route element={<Home />} path="/" />
-      <Route element={<Details />} path="/" />
+      <Route element={<Details />} path="/countries/:countryName" />
     </Route>,
   ),
 );
