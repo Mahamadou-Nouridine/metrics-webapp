@@ -1,0 +1,21 @@
+.container {
+  max-width: 200px;
+  height: 180px;
+  min-width: 180px;
+  width: 100%;
+  background-color: #ec4c8b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px;
+}
+
+.container img {
+  width: 100%;
+}
+
+.container h3 {
+  margin-top: 20px;
+}

@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ec4c8b;
+  color: white;
+  height: 70px;
+}
+
+.inputContainer {
+  max-width: 500px;
+  width: 100%;
+}
+
+.inputContainer input {
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  padding: 3px;
+  border-radius: 3px;
+  border: 0.8px solid white;
+}
