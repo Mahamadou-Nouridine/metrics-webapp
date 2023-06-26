@@ -5,11 +5,15 @@ const initialState = {
   countries: [],
   error: undefined,
   isLoading: false,
+  currentPage: '',
 };
 
 const countriesSlice = createSlice({
   name: 'countries',
   initialState,
+  reducers: {
+    changePage: (state, { payload }) => ({ ...state, currentPage: payload }),
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchData.pending, (state) => ({

@@ -11,23 +11,20 @@ const DetailsHeadline = () => {
   const countries = useSelector((state) => state.countries.countries);
   useEffect(() => {
     if (!countries.lenght) dispatch(fetchData());
-    console.log('====================================');
-    console.log(countryName);
-    console.log('====================================');
-  }, [dispatch]);
+  });
   const country = countries.find((count) => count.name === countryName);
   return (
     <>
-      <div className={styles.container} style={{ backgroundImage: `url(${country.flag})` }}>
+      <div className={styles.container} style={{ backgroundImage: `url(${country?.flag})` }}>
         <h3 style={{ backgroundColor: 'rgb(0, 0, 0, 0.7)', padding: '5px' }}>{countryName}</h3>
       </div>
       <div>
-        <DetailsProperty property="Name" value={country.name} color="dark" />
-        <DetailsProperty property="Continent" value={country.continent} color="light" />
-        <DetailsProperty property="Capital" value="Amman" color="dark" />
-        <DetailsProperty property="Population" value={country.population} color="light" />
-        <DetailsProperty property="Area" value={`${country.area}km²`} color="dark" />
-        <DetailsProperty property="map" value={country.map} color="light" />
+        <DetailsProperty property="Name" value={country?.name} color="dark" />
+        <DetailsProperty property="Continent" value={country?.continent} color="light" />
+        <DetailsProperty property="Capital" value={country?.capital} color="dark" />
+        <DetailsProperty property="Population" value={`${country?.population}`} color="light" />
+        <DetailsProperty property="Area" value={`${`${country?.area}`}km²`} color="dark" />
+        <DetailsProperty property="map" value={country?.map} color="light" />
       </div>
     </>
   );

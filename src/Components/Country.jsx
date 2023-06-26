@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import styles from './styles/Country.module.css';
 
 const Country = ({ image, name }) => (
-  <Link to={`/countries/${name}`}>
-    <div className={styles.container}>
-      <img src={image} alt="" />
-      <h3>{name}</h3>
-    </div>
+
+  <Link className={styles.container} to={`/countries/${name}`}>
+    <img src={image} alt="" />
+    <h3>{name}</h3>
   </Link>
+
 );
 
 export default Country;
