@@ -16,11 +16,17 @@ const CountriesList = ({ countries }) => {
   if (countriesState.error) display = <h4>{countriesState.error}</h4>;
   else if (countriesState.isLoading) display = <h4>...Loading</h4>;
   else {
-    display = countries ? countries?.map(({ name, flag, area }) => (
-      <Country key={name} name={name} image={flag} area={area} />
-    )) : [];
+    display = countries
+      ? countries?.map(({ name, flag, area }) => (
+        <Country key={name} name={name} image={flag} area={area} />
+      ))
+      : [];
   }
-  return <div className={styles.container}>{display}</div>;
+  return (
+    <div className={styles.container}>
+      <div>{display}</div>
+    </div>
+  );
 };
 
 export default CountriesList;
@@ -30,13 +36,15 @@ CountriesList.defaultProps = {
 };
 
 CountriesList.propTypes = {
-  countries: Proptypes.arrayOf(Proptypes.shape({
-    name: Proptypes.string,
-    capital: Proptypes.arrayOf(Proptypes.string),
-    continent: Proptypes.string,
-    flag: Proptypes.string,
-    population: Proptypes.number,
-    map: Proptypes.string,
-    area: Proptypes.number,
-  })),
+  countries: Proptypes.arrayOf(
+    Proptypes.shape({
+      name: Proptypes.string,
+      capital: Proptypes.arrayOf(Proptypes.string),
+      continent: Proptypes.string,
+      flag: Proptypes.string,
+      population: Proptypes.number,
+      map: Proptypes.string,
+      area: Proptypes.number,
+    }),
+  ),
 };
