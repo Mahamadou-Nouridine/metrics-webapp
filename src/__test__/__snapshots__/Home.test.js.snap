@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> Should renders correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <h1>
+      World countries metrics
+    </h1>
+  </div>
+  <div
+    class="container"
+  >
+    <form>
+      <h3>
+        Search by country name
+      </h3>
+      <div
+        class="inputContainer"
+      >
+        <input
+          placeholder="country name ..."
+          type="text"
+          value=""
+        />
+      </div>
+    </form>
+  </div>
+  <div
+    class="container"
+  >
+    <a
+      class="container"
+      href="/countries/Country 1"
+    >
+      <img
+        alt=""
+        src="https://country-1-flag.png"
+      />
+      <h3>
+        Country 1
+      </h3>
+      <h3>
+        30000
+        km²
+      </h3>
+    </a>
+    <a
+      class="container"
+      href="/countries/Country 2"
+    >
+      <img
+        alt=""
+        src="https://country-2-flag.png"
+      />
+      <h3>
+        Country 2
+      </h3>
+      <h3>
+        30000
+        km²
+      </h3>
+    </a>
+    <a
+      class="container"
+      href="/countries/Country 3"
+    >
+      <img
+        alt=""
+        src="https://country-3-flag.png"
+      />
+      <h3>
+        Country 3
+      </h3>
+      <h3>
+        30000
+        km²
+      </h3>
+    </a>
+  </div>
+</div>
+`;

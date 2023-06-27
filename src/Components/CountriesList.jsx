@@ -10,14 +10,14 @@ const CountriesList = ({ countries }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (!countriesState.countries.length) dispatch(fetchData());
-  }, [dispatch]);
+  });
 
   let display = null;
   if (countriesState.error) display = <h4>{countriesState.error}</h4>;
   else if (countriesState.isLoading) display = <h4>...Loading</h4>;
   else {
-    display = countries ? countries?.map(({ name, flag }) => (
-      <Country key={name} name={name} image={flag} />
+    display = countries ? countries?.map(({ name, flag, area }) => (
+      <Country key={name} name={name} image={flag} area={area} />
     )) : [];
   }
   return <div className={styles.container}>{display}</div>;

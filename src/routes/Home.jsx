@@ -6,7 +6,7 @@ import CountriesList from '../Components/CountriesList';
 import { actions } from '../redux/country/coutriesSLice';
 
 const Home = () => {
-  const countries = useSelector((state) => state.countries.countries);
+  const countries = useSelector((state) => state.countries);
   const [query, setQuery] = useState('');
   const dispatch = useDispatch();
 
@@ -14,14 +14,14 @@ const Home = () => {
     setQuery(string);
   };
 
-  const filteredData = countries.filter((country) => {
+  const filteredData = countries.countries.filter((country) => {
     const name = country.name.toLowerCase();
     return name.includes(query.toLowerCase());
   });
 
   useEffect(() => {
     dispatch(actions.changePage('Home'));
-  }, []);
+  });
 
   return (
     <>
