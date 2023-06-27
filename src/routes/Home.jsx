@@ -21,7 +21,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(actions.changePage('Home'));
-  });
+  }, [dispatch]);
 
   return (
     <>

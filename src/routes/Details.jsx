@@ -7,7 +7,7 @@ const Details = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(actions.changePage('Details'));
-  });
+  }, [dispatch]);
   return (
     <div style={{ height: 'calc(100vh - 30px)', backgroundColor: '#fe5395' }}>
       <DetailsHeadline />

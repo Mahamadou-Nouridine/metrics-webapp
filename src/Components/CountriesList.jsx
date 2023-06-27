@@ -10,7 +10,7 @@ const CountriesList = ({ countries }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (!countriesState.countries.length) dispatch(fetchData());
-  });
+  }, [dispatch]);
 
   let display = null;
   if (countriesState.error) display = <h4>{countriesState.error}</h4>;
