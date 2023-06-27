@@ -1,13 +1,13 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>Bookstore</b></h3>
+  <h3><b>metrics-webapp</b></h3>
 </div>
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Bookstore](#-bookstore)
+- [📖 metrics-webapp](#-metrics-webapp)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -16,6 +16,8 @@
     - [Setup](#setup)
     - [Usage](#usage)
     - [Run tests](#run-tests)
+    - [Live demo : deployment](#live-demo--deployment)
+    - [Video : Loom-video](#video--loom-video)
   - [👥 Author(s) ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -23,9 +25,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 Bookstore<a name="about-project"></a>
+# 📖 metrics-webapp<a name="about-project"></a>
 
-A Book management application that allows users to store, add, delete a book, and read and update book reading state.
+**metrics-webapp** is a user mobile version web application that used **restcountries** API to fetch and display countries metrics data using a user friendly user interface
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -37,10 +39,13 @@ A Book management application that allows users to store, add, delete a book, an
 
 ### Key Features <a name="key-features"></a>
 
-- [ ] **Add Book**
-- [ ] **Remove Book**
-- [ ] **Update reading page**
-- [ ] **Edit a book**
+- [x] Created a web app using react-redux
+- [x] Added all necessary fetures for displaying metrics.
+- [x] Used React and Redux technology.
+- [x] Used `fetch` to fetch data from the API.
+- [x] Used store, actions and reducers in React.
+- [x] Used React hooks.
+- [x] Search by country Name.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,7 +69,8 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/mahamadou-nouridine/bookstore.git
+  git clone https://github.com/mahamadou-nouridine/metrics-webapp.git
+  cd metrics-webapp
   npm install
 ```
 
@@ -81,11 +87,17 @@ To run the project, execute the following command:
 To run tests, run the following commands:
 
 ```sh
-  npx stylelint "**/*.{css,scss}"
+  npm run stylelint"
   npx hint .
-  npx eslint .
+  npm run eslint
   npm run test
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Live demo : [deployment](https://metrics-webapp-gjjt.onrender.com/)
+
+### Video : [Loom-video](https://www.loom.com/share/19a5d8d8131a45368511fa23508ab85a?sid=16414dd5-5cb9-4703-af8a-fd976771c290)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,7 +121,7 @@ To run tests, run the following commands:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Mahamadou-Nouridine/bookstore/issues).
+Feel free to check the [issues page](https://github.com/Mahamadou-Nouridine/metrics-webapp/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,7 +133,9 @@ If you like this project give me a follow and/or a star
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank all my coding partners at Microverse
+- Thanks to the Microverse team for the great curriculum.
+- Thanks to the Code Reviewer(s) for the insightful feedbacks.
+- Thanks and credit to Nelson Sakwa the author of the original design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
