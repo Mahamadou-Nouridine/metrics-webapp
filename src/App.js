@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import {
+  Route, RouterProvider, createBrowserRouter, createRoutesFromElements,
+} from 'react-router-dom';
+import Home from './routes/Home';
+import Layout from './routes/Layout';
+import Details from './routes/Details';
 import './App.css';
+import store from './redux/store';
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route errorElement={<div>No page found</div>} path="/" element={<Layout />}>
+      <Route element={<Home />} path="/" />
+      <Route element={<Details />} path="/countries/:countryName" />
+    </Route>,
+  ),
+);
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
 

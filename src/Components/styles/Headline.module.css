@@ -1,0 +1,11 @@
+.container {
+  height: calc(50vh - 60px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('../../assets/images/background.e8e3d87f186997fd15d8.png') no-repeat #fe5395;
+  background-size: cover;
+  color: white;
+}

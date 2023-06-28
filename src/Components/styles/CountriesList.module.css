@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fe5395;
+  height: 100%;
+}
+
+.container div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1000px;
+  min-width: 380px;
+}
